@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> targets;
     public TextMeshProUGUI scoretext;
+    public TextMeshProUGUI gameOverText;
     private int score;
     private float spawnRate = 1.0f;
     // Start is called before the first frame update
@@ -41,6 +42,11 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoretext.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
     }
 }  
 
